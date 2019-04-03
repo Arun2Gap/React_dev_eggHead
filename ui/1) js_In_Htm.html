@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>JS in html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        var rootElement = document.getElementById('root');
+        var element = document.createElement('div');
+        element.textContent = 'Hello arun';
+        element.className = 'container';
+        rootElement.appendChild(element);
+    </script>
+</body>
+
+</html>

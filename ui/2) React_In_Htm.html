@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>React in html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+        var rootElement = document.getElementById('root');
+        // var element = document.createElement('div');
+        // element.textContent = 'Hello arun';
+        // element.className = 'container';
+        // rootElement.appendChild(element);
+        
+        var element = React.createElement(
+            'div', { className: 'container', children: ['hello gap.How are you?', 'have a great day'] }
+        );
+        ReactDOM.render(element, rootElement);
+        console.log(element);
+    </script>
+</body>
+
+</html>

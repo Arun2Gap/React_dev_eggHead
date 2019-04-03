@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>JSX component in html</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id="root"></div>
+    <script type="text/babel">
+        var rootElement=document.getElementById('root');
+        //function variable for reuse code
+        // const Welcome=((props)=><div>{props.msg}</div>);
+        // const element=(
+        //     //display two welcome msg with DRY
+        //     <div>
+        //     <Welcome msg="hello arun"/>
+        //     <Welcome msg="hello gap"/>
+        //     </div>                
+        // )
+        const Welcome=((props)=><div>{props.children}</div>);
+        const element=(
+        //display JSX component with normal children
+            <div>
+                <Welcome>hello arun</Welcome>
+                <Welcome>hello gap</Welcome>
+            </div>
+        );
+        ReactDOM.render(element,rootElement);
+    </script>
+</body>
+
+</html>
