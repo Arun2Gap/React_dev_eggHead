@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+        <title>Re_render JSX component as func</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+
+    <body>
+            
+        <div id="root"></div>
+        <script type="text/babel">
+            function tikTik(){
+                const time=new Date().toLocaleTimeString();
+                const clockElement= <div>
+                Digital_Clock:<input id="Digital_Clock_Id" value={time}></input></div>
+                //the below line is very special develop by react which refresh the particular control alone
+                ReactDOM.render(clockElement,document.getElementById("root"))
+            }
+            // tikTik()
+               setInterval(() => {
+                   tikTik()
+               }, 1000); 
+        </script>
+    </body>
+</html>

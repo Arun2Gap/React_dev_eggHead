@@ -12,16 +12,16 @@
     <div id="root"></div>
     <script type="text/babel">
         var rootElement=document.getElementById('root');
-        //function variable for reuse code
+    //function variable for reuse code
         // const Welcome=((props)=><div>{props.msg}</div>);
         // const element=(
-        //     //display two welcome msg with DRY
+        //     //display two welcome msg as children to div element 
         //     <div>
         //     <Welcome msg="hello arun"/>
         //     <Welcome msg="hello gap"/>
         //     </div>                
         // )
-        const Welcome=((props)=><div>{props.children}</div>);
+        const Welcome=((props)=><div> {props.children}</div>);
         const element=(
         //display JSX component with normal children
             <div>
@@ -29,6 +29,7 @@
                 <Welcome>hello gap</Welcome>
             </div>
         );
+        console.log(element);
         ReactDOM.render(element,rootElement);
     </script>
 </body>
